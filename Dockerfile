@@ -8,23 +8,24 @@ ENV TZ ${TZ}
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
-        libfreetype6-dev \
-        libjpeg62-turbo-dev \
-        libmcrypt-dev \
-        libpng12-dev \
-        libcurl4-nss-dev \
-        libc-client-dev \
-        libkrb5-dev \
-        firebird2.5-dev \
-        libicu-dev \
-        libxml2-dev \
-        libxslt1-dev \
-        ssmtp \
-        autoconf \
-        zip \
-        cron \
-        git \
-        libssh2-1-dev
+    mysql-client \
+    libfreetype6-dev \
+    libjpeg62-turbo-dev \
+    libmcrypt-dev \
+    libpng12-dev \
+    libcurl4-nss-dev \
+    libc-client-dev \
+    libkrb5-dev \
+    firebird2.5-dev \
+    libicu-dev \
+    libxml2-dev \
+    libxslt1-dev \
+    ssmtp \
+    autoconf \
+    zip \
+    cron \
+    git \
+    libssh2-1-dev
         
 RUN docker-php-ext-install -j$(nproc) mcrypt \
     && docker-php-ext-install -j$(nproc) curl \
