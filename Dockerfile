@@ -12,11 +12,11 @@ RUN apt-get update && apt-get install -y \
     libfreetype6-dev \
     libjpeg62-turbo-dev \
     libmcrypt-dev \
-    libpng12-dev \
+    libpng-dev \
     libcurl4-nss-dev \
     libc-client-dev \
     libkrb5-dev \
-    firebird2.5-dev \
+    firebird-dev \
     libicu-dev \
     libxml2-dev \
     libxslt1-dev \
