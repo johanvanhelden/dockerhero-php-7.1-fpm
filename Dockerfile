@@ -28,6 +28,7 @@ RUN apt-get update && apt-get install -y \
     libssh2-1-dev
         
 RUN docker-php-ext-install -j$(nproc) mcrypt \
+    && docker-php-ext-install -j$(nproc) bcmath \
     && docker-php-ext-install -j$(nproc) curl \
     && docker-php-ext-install -j$(nproc) mbstring \
     && docker-php-ext-install -j$(nproc) iconv \
